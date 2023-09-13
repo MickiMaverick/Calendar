@@ -1,38 +1,8 @@
 package model;
 
 public class Reminder extends Entry{
-    public Reminder(String date, String time, String type) {
-        super(date, time, type);
-    }
-
-    @Override
-    public void getDate() {
-
-    }
-
-    @Override
-    public void getTime() {
-
-    }
-
-    @Override
-    public void getLabel() {
-
-    }
-
-    @Override
-    public void isRepeating() {
-
-    }
-
-    @Override
-    public void getIntervalOfRepetition() {
-
-    }
-
-    @Override
-    public void setInterval() {
-
+    public Reminder(String title, Date date, Time time, String type, Boolean repeating, String interval) {
+        super(title, date, time, type, repeating, interval);
     }
 
     public void getReminder() {

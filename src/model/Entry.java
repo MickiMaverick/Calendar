@@ -1,22 +1,41 @@
 package model;
 
-import java.util.List;
-
 public abstract class Entry {
-    private String date;
-    private String time;
-    private String type;
+    public String title, interval;
+    public Date date;
+    public Time time;
+    public String type;
+    public Boolean repeating;
 
-    public Entry(String date, String time, String type) {
+    public Entry(String title, Date date, Time time, String type, Boolean repeating, String interval) {
+        this.title = title;
+        this.interval = interval;
+        this.date = date;
+        this.time = time;
+        this.type = type;
+        this.repeating = repeating;
     }
 
         // getters, setters
-        public abstract void getDate();
-        public abstract void getTime ();
-        public abstract void getLabel ();
-        public abstract void isRepeating ();
-        public abstract void getIntervalOfRepetition ();
-        public abstract void setInterval ();
+        public String getTitle() {
+            return title;
+        }
+        public String getDate() {
+            return date.getDateNum();
+        }
+        public String getTime() {
+            return time.getTime24();
+        }
+        public String getType() {
+            return type;
+        }
+        public Boolean isRepeating() {
+            return repeating;
+        }
+        public String getIntervalOfRepetition() {
+            return interval;
+        }
+        //public abstract void setInterval()
 
 
 }

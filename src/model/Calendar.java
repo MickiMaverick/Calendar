@@ -20,11 +20,31 @@ public class Calendar {
     }
 
     // getters
-    public List<Entry> getAllEvents () {
+    public List<Entry> getAllEntries() {
         return this.calendarEntries;
     }
 
-    public List<Entry> getSoonestEvent () {
+    public void printAllEvents() {
+        System.out.println("Here are all your calendar entries: ");
+        System.out.println("---------------");
+        for (Entry e : calendarEntries) {
+            System.out.print(e.getType());
+            System.out.print(": ");
+            System.out.println(e.getTitle());
+            System.out.print(e.getDate());
+            System.out.print(", ");
+            System.out.println(e.getTime());
+                        if (e.repeating == true) {
+                System.out.print("Repeats ");
+                System.out.println(e.getIntervalOfRepetition());
+            }
+            else
+                System.out.println("Does not repeat");
+            System.out.println("---------------");
+        }
+    }
+
+    public List<Entry> getSoonestEntry() {
         return this.calendarEntries;
     }
 

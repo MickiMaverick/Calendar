@@ -19,6 +19,10 @@ public class Time {
         else return minutes + ":" + hours/2 + "PM";
     }
     public String getTime24() {
-        return minutes + ":" + hours;
+        if (minutes < 10)
+            return hours + ":0" + minutes;
+        else {
+            return hours + ":" + minutes;
+        }
     }
 }
