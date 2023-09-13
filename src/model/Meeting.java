@@ -5,11 +5,5 @@ public class Meeting extends Event{
         super(title, date, time, type, repeating, interval);
     }
 
-    public void getReminder() {
 
-    }
-
-    public void setReminder() {
-
-    }
 }

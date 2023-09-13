@@ -14,17 +14,30 @@ public class Main {
         Time time2 = new Time(15, 0);
         Time time3 = new Time(9, 0);
 
+        String note1 = "Do your homework!";
+        String note2 = "Prepare in time!";
+
         Entry event = new Event("Lunch with Sarah", date1, time1, "Event", true, "every day");
-        Entry reminder = new Reminder ("Do your homework!", date2, time2, "Reminder", false, null);
-        Entry meeting = new Meeting ("Sprint review with team", date3, time3, "Meeting", false, null);
+        Reminder reminder = new Reminder ("CS Homework", date2, time2, "Reminder", false, null);
+        Reminder reminderMeeting = new Reminder ("Preparation", date1, time1, "Reminder", false, null);
+        Event meeting = new Meeting ("Sprint review with team", date3, time3, "Meeting", false, null);
+
+        reminder.setNote(note1);
+        reminderMeeting.setNote(note2);
 
         michisCalendar.addEntry(event);
         michisCalendar.addEntry(reminder);
         michisCalendar.addEntry(meeting);
 
+        meeting.setReminder(reminderMeeting);
+
         michisCalendar.printAllEvents();
         michisCalendar.getAllEntries();
         michisCalendar.getSoonestEntry();
+
+        michisCalendar.printReminder(reminderMeeting);
+
+
 
     }
 }

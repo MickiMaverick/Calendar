@@ -52,4 +52,21 @@ public class Calendar {
         this.calendarEntries.add(e);
     }
 
+    public void printReminder(Reminder r) {
+        System.out.print (r.getType());
+        System.out.print(": ");
+        System.out.println(r.getTitle());
+        System.out.print(r.getDate());
+        System.out.print(", ");
+        System.out.println(r.getTime());
+        if (r.repeating == true) {
+            System.out.print("Repeats ");
+            System.out.println(r.getIntervalOfRepetition());
+        }
+        else
+            System.out.println("Does not repeat");
+        System.out.println(r.getNote());
+        System.out.println("---------------");
+    }
+
 }

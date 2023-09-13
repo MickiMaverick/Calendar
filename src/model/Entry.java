@@ -35,7 +35,8 @@ public abstract class Entry {
         public String getIntervalOfRepetition() {
             return interval;
         }
-        //public abstract void setInterval()
+
+    //public abstract void setInterval()
 
 
 }
